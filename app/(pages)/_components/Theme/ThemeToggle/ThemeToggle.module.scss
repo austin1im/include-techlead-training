@@ -1,0 +1,36 @@
+.mainContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+.toggle {
+    width: 6rem;
+    height: 3rem;
+    background-color: orange;
+    border-radius: 2rem;
+    border: 1px solid darkslateblue;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .switch {
+        width: 2rem;
+        height: 2rem;
+        background-color: darkslateblue;
+        border-radius: 50%;
+        margin-left: 0.437rem;
+        transition: ease 0.2s;
+    }
+
+    .switch.dark {
+        background-color: orange;
+        transform: translateX(3rem);
+    }
+}
+
+.toggle.dark {
+    background-color: darkslateblue;
+    border-color: orange;
+}

@@ -1,0 +1,85 @@
+.container {
+  color: black;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 233, 199, 1) 100%);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .ctaBtn {
+  background: white;
+  color: #EEAECA;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero .ctaBtn:hover {
+  background: #f3f4f6;
+}
+
+.planSection {
+  padding: 5% 10%;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 2rem;
+    }
+
+.grid {
+    padding-top: 3%;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  :hover {
+    background-color: #faf9f9;
+    border-radius: 20px;
+  }
+}
+}
+
+.planSection .card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.planSection .card .day {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #94E9C7;
+  margin-bottom: 0.5rem;
+}
+
+.planSection .card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.planSection .card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+

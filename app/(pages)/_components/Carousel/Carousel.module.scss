@@ -1,0 +1,69 @@
+.title {
+    color: orange;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.title.dark {
+    color: darkslateblue;
+}
+
+.sliderContainer {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    .sideArrow {
+        border-radius: 50%;
+        border: 1px solid orange;
+        position: relative;
+        z-index: 100;
+    }
+    .sideArrow.dark {
+        border-color: darkslateblue;
+    }
+
+    .smallPanel {
+        background-color: orange;
+        width: 16rem;
+        height: 16rem;
+        user-select: none;
+    }
+    .smallPanel.dark {
+        background-color: darkslateblue;
+    }
+
+    .bigPanel {
+        background-color: orange;
+        width: 32rem;
+        height: 32rem;
+        user-select: none;
+    }
+    .bigPanel.dark {
+        background-color: darkslateblue;
+    }
+}
+
+.dotContainer {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .dot {
+        border-radius: 50%;
+        border: 1px solid orange;
+        width: .75rem;
+        height: .75rem;
+    }
+    .dot.dark {
+        border-color: darkslateblue;
+    }
+    .dot.active {
+        background-color: orange;
+    }
+    .dot.dark.active {
+        background-color: darkslateblue;
+    }
+}
