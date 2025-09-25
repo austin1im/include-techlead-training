@@ -10,6 +10,10 @@ export default function CardCreate() {
         updateForm({...form, [e.target.name]: e.target.value})
     }
 
+    const handleSubmit = async (e) => {const res = await fetch('/api/...', GET
+
+    )}
+
     return (
         <main className={styles.mainContainer}>
             create a card
