@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 
 export const Theme = createContext();
 
-export default function ThemeProvider({ children }) {
+export default function ThemeProviderCards({ children }) {
     const [isLight, updateTheme] = useState(true);
     return (
         <Theme.Provider value={[isLight, updateTheme]}>

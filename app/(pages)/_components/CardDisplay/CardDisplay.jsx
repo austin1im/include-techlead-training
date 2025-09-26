@@ -2,11 +2,29 @@
 import styles from './CardDisplay.module.scss';
 import { useEffect, useState } from 'react';
 
-function Card ({title, text}) {
+function Card ({text, title, id}) {
+    const handleDelete = async (e) => {
+        //e.preventDefault();
+
+        const res = await fetch('/api/cards', {
+        method: 'DELETE'
+        })
+        const data = await res.json();
+
+        if (res.ok) {
+            alert(data.message);
+        } else { 
+            alert(data.error);
+        }
+    }
+
     return (
         <main className={styles.cardMainContainer}>
-            <h1>{title}</h1>
-            <p>{text}</p>
+            <div>
+                <h1>{title}</h1>
+                <p>{text}</p>
+            </div>
+            <button onClick={handleDelete}>X</button>
         </main>
     )
 }
@@ -18,7 +36,7 @@ export default function CardDisplay() {
     useEffect(() => {
         const fetchCardData = async () => {
             try {
-                const res = await fetch("/api/cards");
+                const res = await fetch("/api/cards"); //fetch defaults to get
                 const data = await res.json();
                 setCardData(data);
             }
@@ -37,7 +55,7 @@ export default function CardDisplay() {
     return (
         <main className={styles.cardsContainer}>
             {cardData.map((card, index) => (
-                <Card key={index} title={card.title} text={card.text}/> 
+                <Card key={index} title={card.title} text={card.text} id={card._id}/> 
             ))}
         </main>
     )

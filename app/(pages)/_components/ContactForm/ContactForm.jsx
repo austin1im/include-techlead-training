@@ -21,7 +21,11 @@ export default function ContactForm() {
         })
 
         const data = await res.json()
-        alert(data.message)
+        if (res.ok) {
+            alert(data.message)
+        } else {
+            alert(data.error)
+        }
     }
 
     return (
