@@ -1,13 +1,16 @@
 "use client";
+import { stringify } from 'querystring';
 import styles from './CardDisplay.module.scss';
 import { useEffect, useState } from 'react';
 
 function Card ({text, title, id}) {
-    const handleDelete = async (e) => {
+    const handleDelete = async (e, id) => {
         //e.preventDefault();
 
         const res = await fetch('/api/cards', {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(id)
         })
         const data = await res.json();
 
@@ -16,7 +19,7 @@ function Card ({text, title, id}) {
         } else { 
             alert(data.error);
         }
-    }
+    }   
 
     return (
         <main className={styles.cardMainContainer}>
@@ -24,7 +27,7 @@ function Card ({text, title, id}) {
                 <h1>{title}</h1>
                 <p>{text}</p>
             </div>
-            <button onClick={handleDelete}>X</button>
+            <button onClick={(e) => handleDelete(e, id)}>X</button>
         </main>
     )
 }
