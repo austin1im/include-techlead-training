@@ -29,7 +29,7 @@ export async function POST(request) {
 
         const result = await collection.insertOne(newCard);
         
-        return NextResponse.json({message: "Card successfully created!"}, {status: 201})
+        return NextResponse.json({_id: result.insertedId, ...newCard}, {status: 201})
     }
     catch (e) {
         return NextResponse.json({error: e.message}, {status: 500})

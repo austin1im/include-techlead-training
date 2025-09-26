@@ -1,12 +1,9 @@
 "use client";
-import { stringify } from 'querystring';
 import styles from './CardDisplay.module.scss';
 import { useEffect, useState } from 'react';
 
-function Card ({text, title, id}) {
+function Card ({text, title, id, onDelete}) {
     const handleDelete = async (e, id) => {
-        //e.preventDefault();
-
         const res = await fetch('/api/cards', {
         method: 'DELETE',
         headers: {"Content-Type": "application/json"},
@@ -16,6 +13,7 @@ function Card ({text, title, id}) {
 
         if (res.ok) {
             alert(data.message);
+            onDelete(id);
         } else { 
             alert(data.error);
         }
@@ -32,33 +30,16 @@ function Card ({text, title, id}) {
     )
 }
 
-export default function CardDisplay() {
-    const [cardData, setCardData] = useState([]);
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        const fetchCardData = async () => {
-            try {
-                const res = await fetch("/api/cards"); //fetch defaults to get
-                const data = await res.json();
-                setCardData(data);
-            }
-            catch (e) {
-                console.error("card data fetching error", e);
-            }
-            finally {
-                setLoading(false);
-            }
-        }
-
-        fetchCardData();
-    }, [])
+export default function CardDisplay({cardData, loading, setCardData}) {
+    const handleCardDelete = (id) => {
+        setCardData((prev) => prev.filter((card) => card._id !== id)) 
+    }
 
     if (loading) return <Card title="loading" text="loading"/>
     return (
         <main className={styles.cardsContainer}>
             {cardData.map((card, index) => (
-                <Card key={index} title={card.title} text={card.text} id={card._id}/> 
+                <Card key={index} title={card.title} text={card.text} id={card._id} onDelete={handleCardDelete}/> 
             ))}
         </main>
     )

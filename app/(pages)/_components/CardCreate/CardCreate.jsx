@@ -3,7 +3,7 @@ import styles from './CardCreate.module.scss'
 import { useState } from 'react'
 
 
-export default function CardCreate() {
+export default function CardCreate({updateCards}) {
     const [form, updateForm] = useState({title: '', text: ''})
 
     const handleChange = (e) => {
@@ -22,7 +22,8 @@ export default function CardCreate() {
         const data = await res.json();
 
         if (res.ok) {
-            alert(data.message);
+            alert("Card Successfully Created!");
+            updateCards(data)
         } else { 
             alert(data.error);
         }
