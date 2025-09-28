@@ -21,7 +21,6 @@ export async function POST(request) {
     try {
         const data = await request.json();
         const {title, text} = data;
-        const newCard = {title, text};
 
         const client = await clientPromise; 
         const db = client.db("cards");
@@ -30,6 +29,31 @@ export async function POST(request) {
         const result = await collection.insertOne(newCard);
         
         return NextResponse.json({_id: result.insertedId, ...newCard}, {status: 201})
+    }
+    catch (e) {
+        return NextResponse.json({error: e.message}, {status: 500})
+    }
+}
+
+export async function PUT(request) {
+    try {
+        const data = await request.json();
+        const {title, text, id} = data;
+
+        const updateFields = {};
+        if (title) {updateFields.title = title}
+        if (text) {updateFields.text = text} 
+
+        const client = await clientPromise; 
+        const db = client.db("cards");
+        const collection = db.collection("card");
+
+        const result = await collection.updateOne(
+            {_id: new ObjectId(id)},
+            {$set: updateFields}
+        )
+
+        return NextResponse.json({status:200})
     }
     catch (e) {
         return NextResponse.json({error: e.message}, {status: 500})

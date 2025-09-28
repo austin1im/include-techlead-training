@@ -2,6 +2,7 @@
 import styles from './task_example.module.scss';
 import CardCreate from '../_components/CardCreate/CardCreate';
 import CardDisplay from '../_components/CardDisplay/CardDisplay';
+import CardUpdate from '../_components/CardUpdate/CardUpdate'
 import { useState, useEffect} from 'react';
 
 export default function Task5() {
@@ -32,7 +33,10 @@ export default function Task5() {
 
   return (
     <div className={styles.container}>
-      <CardCreate updateCards={updateCardData}/>
+      <div className={styles.cardSettingContainer}>
+        <CardCreate updateCards={updateCardData}/>
+        <CardUpdate cardData={cardData} setCardData={setCardData}/>
+      </div>
       <CardDisplay cardData={cardData} loading={loading} setCardData={setCardData}/>
     </div>
   );

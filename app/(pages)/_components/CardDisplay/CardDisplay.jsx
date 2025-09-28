@@ -2,7 +2,7 @@
 import styles from './CardDisplay.module.scss';
 import { useEffect, useState } from 'react';
 
-function Card ({text, title, id, onDelete}) {
+function Card ({text, title, id, onDelete, index}) {
     const handleDelete = async (e, id) => {
         const res = await fetch('/api/cards', {
         method: 'DELETE',
@@ -25,8 +25,22 @@ function Card ({text, title, id, onDelete}) {
                 <h1>{title}</h1>
                 <p>{text}</p>
             </div>
-            <button onClick={(e) => handleDelete(e, id)}>X</button>
+            <div>
+                <button onClick={(e) => handleDelete(e, id)}>X</button>
+                <h4>{`card number: ${index+1}`}</h4>
+            </div>
         </main>
+    )
+}
+
+function LoadingCard() {
+    return (
+        <main className={styles.cardMainContainer}>
+        <div>
+            <h1>Loading...</h1>
+            <p>Loading...</p>
+        </div>
+    </main>
     )
 }
 
@@ -35,11 +49,11 @@ export default function CardDisplay({cardData, loading, setCardData}) {
         setCardData((prev) => prev.filter((card) => card._id !== id)) 
     }
 
-    if (loading) return <Card title="loading" text="loading"/>
+    if (loading) return <LoadingCard/>
     return (
         <main className={styles.cardsContainer}>
             {cardData.map((card, index) => (
-                <Card key={index} title={card.title} text={card.text} id={card._id} onDelete={handleCardDelete}/> 
+                <Card key={index} title={card.title} text={card.text} id={card._id} onDelete={handleCardDelete} index={index}/> 
             ))}
         </main>
     )
