@@ -52,7 +52,7 @@
 
         return (
             <main className={styles.mainContainer}>
-                update a card (dysfunctional)
+                update a card
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
                     <input type="number" name="index" placeholder="card number to edit" onChange={handleChange} required/>
                     <input name="title" placeholder="new title (blank if no change)" onChange={handleChange}/>

@@ -1,6 +1,5 @@
 "use client";
 import styles from './CardDisplay.module.scss';
-import { useEffect, useState } from 'react';
 
 function Card ({text, title, id, onDelete, index}) {
     const handleDelete = async (e, id) => {

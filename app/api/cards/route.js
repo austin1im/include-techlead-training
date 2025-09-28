@@ -21,6 +21,7 @@ export async function POST(request) {
     try {
         const data = await request.json();
         const {title, text} = data;
+        const newCard = {title, text};
 
         const client = await clientPromise; 
         const db = client.db("cards");
