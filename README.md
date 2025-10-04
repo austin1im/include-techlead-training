@@ -14,16 +14,24 @@ This is a collection of mini-projects designed to improve my full-stack developm
 ### 1. Install dependencies:
 
 ```bash
-npm run dev
+npm install
 ```
+### 2. Ensure .env.local has a working Ethereal Email (expires after 48 hours)
 
-### 2. Run the development server:
+Create a temporary email at https://ethereal.email/
+
+
+### 3. Run the development server:
 
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Additional Info
+
+I'm aware this project has major security issues, but for testing purposes, I left them. Plz don't abuse them...
 
 ## Learn More
 
