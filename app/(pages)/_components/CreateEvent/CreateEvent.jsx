@@ -46,6 +46,7 @@ export default function ContactForm() {
                 </form>
                 <a href="https://calendar.google.com/calendar/u/1?cid=Y18wMjdlOTBkNjY0ZjQ5MzI1NjhiMTUzMGVjY2UzM2ZkOWZjN2E2ZWE1MjdmMjU5OThjOTg4MGEyODk0ZWI1NTI1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
                 target="_blank" rel="noopener noreferrer">visit calendar</a>
+                <p>(only works on my local build)</p>
         </main>
     );
 }
