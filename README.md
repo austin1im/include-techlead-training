@@ -16,7 +16,7 @@ This is a collection of mini-projects designed to improve my full-stack developm
 ```bash
 npm install
 ```
-### 2. Ensure .env.local has a working Ethereal Email (expires after 48 hours)
+### 2. Ensure .env.local has a working Ethereal Email (randomly breaks/expires)
 
 Create a temporary email at https://ethereal.email/
 
