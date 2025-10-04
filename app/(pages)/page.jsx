@@ -6,7 +6,7 @@ const days = [
   { day: 2, title: 'Task 2', description: 'Carousel (useContext)', url: '/task2' },
   { day: 3, title: 'Task 3', description: 'Blogs (SSG)', url: '/task3' },
   { day: 4, title: 'Task 4', description: 'API (Nodemailer + Google Calendar)', url: '/task4' },
-  { day: 0, title: 'Additional Practice', description: 'API + MongoDB', url: '/task5' },
+  { day: 0, title: 'Additional Practice', description: 'CRUD + MongoDB', url: '/task5' },
 ];
 
 export default function Home() {
