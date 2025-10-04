@@ -44,4 +44,4 @@ next-env.d.ts
 .vscode/settings.json
 
 # data
-#data/service-account.json
+data/service-account.json
