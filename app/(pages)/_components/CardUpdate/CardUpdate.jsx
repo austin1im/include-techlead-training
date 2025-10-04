@@ -27,7 +27,7 @@
 
 
             const res = await fetch('/api/cards', {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(payload)
             })
