@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const senderEmail = process.env.EMAIL_USER; //EMAIL_USER=baron7@ethereal.email
-const senderPass = process.env.EMAIL_PASS; //EMAIL_PASS=hBDfQdB6XV4RUH4xsH
+const senderEmail = process.env.EMAIL_USER;
+const senderPass = process.env.EMAIL_PASS;
 
 export async function POST(request) {
     const data = await request.json();
