@@ -1,0 +1,69 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
+.card {
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(2px);
+    padding: 1.88rem;
+    max-width: 36.4375rem;
+
+    .term {
+        color: var(--gray);
+        @include mixins.fontStyle(1.125rem, 400, normal, 'Inter');
+        margin-bottom: 0.5rem;
+    }
+
+    .logo {
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+
+        @include mixins.phone {
+            width: 298px;
+            height: 150px;
+        }
+    }
+
+    .org {
+        border-top: 0.5px solid var(--gray);
+        padding-top: 1rem;
+        color: var(--white);
+        @include mixins.fontStyle(1.5rem, 400, normal, 'Inter');
+        margin-bottom: 0.5rem;
+
+        @include mixins.phone {
+            @include mixins.fontStyle(1.125rem, 400, normal, 'Inter');
+        }
+    }
+
+    .description {
+        color: var(--gray);
+        @include mixins.fontStyle(1.5rem, 400, normal, 'Inter');
+        margin-bottom: 1.25rem;
+
+        @include mixins.phone {
+            @include mixins.fontStyle(1.125rem, 400, normal, 'Inter');
+        }
+    }
+
+    .redirectButton {
+        border-radius: 6.25rem;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(2px);
+        padding: 1.25rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray);
+        @include mixins.fontStyle(1.125rem, 400, normal, 'Inter');
+        gap: 0.62rem;
+        user-select: none;
+        text-decoration: none;
+    
+        .greenCircle {
+            background-color: var(--green-status);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+        }
+    }
+}

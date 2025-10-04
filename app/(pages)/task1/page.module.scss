@@ -1,0 +1,88 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+    .missionText {
+        @include mixins.fontStyle(3.875rem, 700, normal, 'Inter');
+        width: 70%;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: black; 
+
+        @include mixins.phone {
+            @include mixins.fontStyle(2.875rem, 700, normal, 'Inter');
+            width: 80%;
+        }
+    }
+    
+    .helloImage {
+        object-fit: cover;
+        border-radius: 1.25rem;
+
+        @include mixins.phone {
+            width: 358px;
+            height: 448px;
+        }
+    }
+}
+
+.recent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12.5rem;
+    background: var(--Main-gradient, linear-gradient(68deg, #332950 10.09%, var(--include-purple) 50.92%, #322D41 93.48%));
+    padding: 28.12rem 0;
+
+    @include mixins.phone {
+        align-items: flex-start;
+        margin-top: -25rem;
+        padding: 31.25rem 1rem;
+    }
+
+    .penLogo{
+        @include mixins.phone {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    .recentTitle {
+        color: var(--white);
+        @include mixins.fontStyle(3.25rem, 700, normal, 'Inter');
+        margin-top: 0.75rem;
+
+        @include mixins.phone {
+            @include mixins.fontStyle(2rem, 700, normal, 'Inter');
+        }
+    }
+
+    .recentSubtitle {
+        color: var(--gray);
+        @include mixins.fontStyle(2rem, 400, normal, 'Inter');
+        margin: 2rem 0;
+
+        @include mixins.phone {
+            @include mixins.fontStyle(1.125rem, 400, normal, 'Inter');
+        }
+    }
+
+    .cardContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .andMore {
+        color: var(--gray);
+        @include mixins.fontStyle(1.125rem, 400, normal, 'Inter');
+    }
+}

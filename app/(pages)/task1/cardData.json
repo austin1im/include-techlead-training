@@ -1,0 +1,30 @@
+[
+    {
+        "term": "WINTER/SPRING 2023",
+        "logoPath": "/ielc.png",
+        "org": "IELC Tutoring",
+        "description": "Website and brand identity project for the Interactive Elementary Learning Center to boost credibility and increase participation in their free 7-week summer program.",
+        "URL": "https://www.ielctutoring.com/"
+    }, 
+    {
+        "term": "FALL/WINTER 2023",
+        "logoPath": "/bloom&vine.png",
+        "org": "Bloom and Vine",
+        "description": "Website project for Bloom and Vine a boutique floral design studio located in Northern California. Bloom and Vine strives to make every event unforgettable.",
+        "URL": "https://www.bloomandvine.net/"
+    }, 
+    {
+        "term": "WINTER/SPRING 2022",
+        "logoPath": "/vietnam.png",
+        "org": "New Vietnam Studies Initiative",
+        "description": "We developed the website for NVSI, promoting research and collaboration in fields related to contemporary Vietnam's economic, political, and cultural development.",
+        "URL": "https://newvietnam.ucdavis.edu/"
+    }, 
+    {
+        "term": "FALL/WINTER 2021",
+        "logoPath": "/oneloop.png",
+        "org": "ONELOOP",
+        "description": "Oneloop is a team of graduate and undergraduate students at UCD. They design and build a Hyperloop pod to compete in SpaceX's annual Hyperloop competition.",
+        "URL": "https://davishyperloop.com/"
+    }
+]

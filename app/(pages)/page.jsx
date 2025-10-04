@@ -2,8 +2,8 @@ import Link from 'next/link';
 import styles from './page.module.scss';
 
 const days = [
-  { day: 1, title: 'Task 1', description: 'Example Task', url: '/task_example' },
-  { day: 2, title: 'Task 2', description: 'Carousel', url: '/task2' },
+  { day: 1, title: 'Task 1', description: 'Recreating a portion of the #include website', url: '/task1' },
+  { day: 2, title: 'Task 2', description: 'Carousel (useContext)', url: '/task2' },
   { day: 3, title: 'Task 3', description: 'Blogs (SSG)', url: '/task3' },
   { day: 4, title: 'Task 4', description: 'API (Nodemailer + Google Calendar)', url: '/task4' },
   { day: 0, title: 'Additional Practice', description: 'API + MongoDB', url: '/task5' },
