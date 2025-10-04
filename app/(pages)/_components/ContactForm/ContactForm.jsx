@@ -37,6 +37,7 @@ export default function ContactForm() {
                     <textarea name="message" placeholder='message' onChange={handleChange} required />
                     <button type='submit'>submit</button>
                 </form>
+                <p>(this email goes to ethereal mail [not saved for long, just for experimental purposes])</p>
         </main>
     );
 }
