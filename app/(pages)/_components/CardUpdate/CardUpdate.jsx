@@ -35,7 +35,6 @@
             const data = await res.json();
 
             if (res.ok) {
-                alert(`Card ${form.index} Successfully Updated!`);
                 setCardData((prev) => prev.map((card, i) => {
                     if (i === index) {
                         return{ ...card,

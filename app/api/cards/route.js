@@ -75,7 +75,7 @@ export async function DELETE(request) {
             _id: objectId
         });
 
-        return NextResponse.json({ message: "Card deleted"}, { status: 200 });
+        return NextResponse.json({ status: 200 });
     }
     catch (e) {
         return NextResponse.json({ error: e.message}, { status: 500 });

@@ -22,7 +22,6 @@ export default function CardCreate({updateCards}) {
         const data = await res.json();
 
         if (res.ok) {
-            alert("Card Successfully Created!");
             updateCards(data)
         } else { 
             alert(data.error);
