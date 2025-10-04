@@ -33,6 +33,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 I'm aware this project has major security issues, but for testing purposes, I left them. Plz don't abuse them...
 
+Google prevents keys from being leaked, so the Google Calendar event maker will not work
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
