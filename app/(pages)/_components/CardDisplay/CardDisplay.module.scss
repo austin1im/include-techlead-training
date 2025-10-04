@@ -13,10 +13,12 @@
 
     h1 {
         color: white;
+        word-break: break-all;
     }
 
     p {
-        color: gray
+        color: gray;
+        word-break: break-all;
     }
 
     button {
