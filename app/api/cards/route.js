@@ -36,7 +36,7 @@ export async function POST(request) {
     }
 }
 
-export async function PUT(request) {
+export async function PATCH(request) {
     try {
         const data = await request.json();
         const {title, text, id} = data;
