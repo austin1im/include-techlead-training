@@ -1,4 +1,4 @@
-# A Collection of Short-term Projects 
+# A Collection of Short-Term Projects 
 
 This is a collection of mini-projects designed to improve my full-stack development skills for #include, and also includes one of my own mini-projects to practice making API requests and experimenting with a database.
 
@@ -11,17 +11,23 @@ This is a collection of mini-projects designed to improve my full-stack developm
 
 ## Getting Started
 
-### 1. Install dependencies:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/austin1im/include-techlead-training.git
+cd include-techlead-training
+```
+
+### 2. Install Dependencies:
 
 ```bash
 npm install
 ```
-### 2. Ensure .env.local has a working Ethereal Email (randomly breaks/expires)
+### 3. Ensure .env.local has a working Ethereal Email (randomly breaks/expires)
 
 Create a temporary email at https://ethereal.email/
 
 
-### 3. Run the development server:
+### 4. Run the development server:
 
 ```bash
 npm run dev
