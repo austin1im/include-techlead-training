@@ -20,16 +20,16 @@ export async function POST(request) {
     try {
         console.log({name, email, message})
         const toSend = await transporter.sendMail({
-            from: `Hangyodon <${senderEmail}>`,
+            from: `${senderEmail}`,
             to: email,
-            subject: "test",
-            text: `Hello ${name} this is your message ${message}`
+            subject: "Test from my app",
+            text: `You received a message from <${name}> this is the message <${message}>`
         })
         
         const previewUrl = nodemailer.getTestMessageUrl(toSend);
         console.log("Preview URL:", previewUrl);
 
-        return NextResponse.json({ message: "Message received!" }, { status: 200 })
+        return NextResponse.json({ message: `Message received! Visit ${previewUrl} to preview your message!` }, { status: 200 })
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 })
     }
